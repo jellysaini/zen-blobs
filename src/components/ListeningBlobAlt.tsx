@@ -84,46 +84,6 @@ const ListeningBlobAlt = () => {
         >
           <Ear size={36} strokeWidth={1.5} />
         </motion.div>
-        
-        {/* Incoming sound waves - left */}
-        <div className="absolute -left-4 flex flex-col gap-2">
-          {[0, 1, 2].map((index) => (
-            <motion.div
-              key={index}
-              className="w-10 h-1 rounded-full bg-gradient-to-r from-foreground/50 to-transparent"
-              animate={{
-                x: [0, 24, 0],
-                opacity: [0, 0.9, 0],
-              }}
-              transition={{
-                duration: 1.8,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: index * 0.25,
-              }}
-            />
-          ))}
-        </div>
-        
-        {/* Incoming sound waves - right */}
-        <div className="absolute -right-4 flex flex-col gap-2">
-          {[0, 1, 2].map((index) => (
-            <motion.div
-              key={index}
-              className="w-10 h-1 rounded-full bg-gradient-to-l from-foreground/50 to-transparent"
-              animate={{
-                x: [0, -24, 0],
-                opacity: [0, 0.9, 0],
-              }}
-              transition={{
-                duration: 1.8,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: index * 0.25,
-              }}
-            />
-          ))}
-        </div>
       </div>
       
       <span className="text-lg font-medium text-muted-foreground tracking-wide uppercase">

@@ -61,9 +61,6 @@ export default {
         terracotta: "hsl(var(--terracotta))",
         rust: "hsl(var(--rust))",
         clay: "hsl(var(--clay))",
-        crimson: "hsl(var(--crimson))",
-        burgundy: "hsl(var(--burgundy))",
-        rose: "hsl(var(--rose))",
         // Earth tones - greens
         olive: "hsl(var(--olive))",
         sage: "hsl(var(--sage))",
