@@ -4,35 +4,12 @@ const IdleBlobAlt = () => {
   return (
     <div className="flex flex-col items-center gap-6">
       <div className="relative w-64 h-64 flex items-center justify-center">
-        {/* Floating particles */}
-        {[0, 1, 2, 3].map((index) => (
-          <motion.div
-            key={index}
-            className="absolute w-3 h-3 rounded-full bg-terracotta/40"
-            style={{
-              left: `${35 + index * 10}%`,
-              top: `${30 + (index % 2) * 40}%`,
-            }}
-            animate={{
-              y: [0, -15, 0],
-              x: [0, index % 2 === 0 ? 8 : -8, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 3 + index * 0.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: index * 0.4,
-            }}
-          />
-        ))}
-        
-        {/* Outer glow ring */}
+        {/* Outer shadow/glow */}
         <motion.div
-          className="absolute w-52 h-52 rounded-full border border-terracotta/20"
+          className="absolute w-52 h-52 rounded-full bg-gradient-to-br from-terracotta/20 to-moss/15 blur-lg"
           animate={{
-            scale: [1, 1.08, 1],
-            opacity: [0.2, 0.4, 0.2],
+            scale: [1, 1.04, 1],
+            opacity: [0.25, 0.4, 0.25],
           }}
           transition={{
             duration: 4,
@@ -41,15 +18,14 @@ const IdleBlobAlt = () => {
           }}
         />
         
-        {/* Main blob body */}
+        {/* Layer 3 - Outer ring */}
         <motion.div
-          className="absolute w-44 h-44 rounded-full bg-gradient-to-br from-terracotta/60 to-rust/50"
+          className="absolute w-48 h-48 rounded-full bg-gradient-to-br from-terracotta to-moss/80"
           style={{
-            boxShadow: "0 8px 32px rgba(0,0,0,0.15), inset 0 4px 20px rgba(255,255,255,0.1)",
+            boxShadow: "inset 0 -4px 20px rgba(0,0,0,0.15), inset 0 4px 10px rgba(255,255,255,0.1)",
           }}
           animate={{
-            scale: [1, 1.03, 0.98, 1],
-            borderRadius: ["50%", "48% 52% 50% 50%", "52% 48% 50% 50%", "50%"],
+            scale: [1, 1.015, 0.995, 1],
           }}
           transition={{
             duration: 5,
@@ -58,31 +34,49 @@ const IdleBlobAlt = () => {
           }}
         />
         
-        {/* Inner highlight */}
+        {/* Layer 2 - Middle ring */}
         <motion.div
-          className="absolute w-32 h-32 rounded-full bg-gradient-to-br from-clay/50 to-transparent"
+          className="absolute w-40 h-40 rounded-full bg-gradient-to-br from-rust/85 to-olive/70"
           style={{
-            transform: "translate(-10%, -10%)",
+            boxShadow: "inset 0 2px 15px rgba(255,255,255,0.1)",
           }}
           animate={{
-            opacity: [0.4, 0.6, 0.4],
+            scale: [1, 1.012, 0.992, 1],
           }}
           transition={{
-            duration: 3,
+            duration: 5,
             repeat: Infinity,
             ease: "easeInOut",
+            delay: 0.3,
           }}
         />
         
-        {/* Core center */}
+        {/* Layer 1 - Inner circle */}
         <motion.div
-          className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-rust/40 to-terracotta/30"
+          className="absolute w-32 h-32 rounded-full bg-gradient-to-br from-clay/70 to-sage/55"
+          style={{
+            boxShadow: "inset 0 2px 10px rgba(255,255,255,0.15)",
+          }}
           animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.5, 0.7, 0.5],
+            scale: [1, 1.008, 0.995, 1],
           }}
           transition={{
-            duration: 2.5,
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.6,
+          }}
+        />
+        
+        {/* Core - subtle breathing glow */}
+        <motion.div
+          className="absolute w-20 h-20 rounded-full bg-gradient-to-br from-muted/50 to-muted/30"
+          animate={{
+            opacity: [0.4, 0.6, 0.4],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 3.5,
             repeat: Infinity,
             ease: "easeInOut",
           }}
