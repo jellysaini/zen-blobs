@@ -90,16 +90,16 @@ const ListeningBlobAlt = () => {
           {[0, 1, 2].map((index) => (
             <motion.div
               key={index}
-              className="w-8 h-0.5 rounded-full bg-gradient-to-r from-terracotta/60 to-transparent"
+              className="w-10 h-1 rounded-full bg-gradient-to-r from-foreground/50 to-transparent"
               animate={{
-                x: [0, 20, 0],
-                opacity: [0, 0.8, 0],
+                x: [0, 24, 0],
+                opacity: [0, 0.9, 0],
               }}
               transition={{
-                duration: 1.5,
+                duration: 1.8,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: index * 0.2,
+                delay: index * 0.25,
               }}
             />
           ))}
@@ -110,16 +110,16 @@ const ListeningBlobAlt = () => {
           {[0, 1, 2].map((index) => (
             <motion.div
               key={index}
-              className="w-8 h-0.5 rounded-full bg-gradient-to-l from-terracotta/60 to-transparent"
+              className="w-10 h-1 rounded-full bg-gradient-to-l from-foreground/50 to-transparent"
               animate={{
-                x: [0, -20, 0],
-                opacity: [0, 0.8, 0],
+                x: [0, -24, 0],
+                opacity: [0, 0.9, 0],
               }}
               transition={{
-                duration: 1.5,
+                duration: 1.8,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: index * 0.2,
+                delay: index * 0.25,
               }}
             />
           ))}
