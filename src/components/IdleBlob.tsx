@@ -8,11 +8,11 @@ const IdleBlob = () => {
         <motion.div
           className="absolute w-48 h-48 rounded-full bg-gradient-to-br from-terracotta/20 to-rust/10 blur-xl"
           animate={{
-            scale: [1, 1.15, 1],
-            opacity: [0.4, 0.6, 0.4],
+            scale: [1, 1.12, 1],
+            opacity: [0.4, 0.55, 0.4],
           }}
           transition={{
-            duration: 4,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -22,10 +22,11 @@ const IdleBlob = () => {
         <motion.div
           className="relative w-40 h-40"
           animate={{
-            scale: [1, 1.05, 1],
+            scale: [1, 1.04, 0.98, 1],
+            rotate: [0, 2, -2, 0],
           }}
           transition={{
-            duration: 3,
+            duration: 4,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -51,13 +52,13 @@ const IdleBlob = () => {
               animate={{
                 d: [
                   "M100,20 C140,20 180,60 180,100 C180,140 140,180 100,180 C60,180 20,140 20,100 C20,60 60,20 100,20",
-                  "M100,25 C145,30 175,55 175,100 C175,145 145,175 100,175 C55,175 25,145 25,100 C25,55 55,25 100,25",
-                  "M100,22 C142,28 178,58 178,100 C178,142 142,178 100,178 C58,178 22,142 22,100 C22,58 58,22 100,22",
+                  "M100,28 C148,32 172,58 172,100 C172,142 148,168 100,172 C52,168 28,142 28,100 C28,58 52,32 100,28",
+                  "M100,24 C138,28 176,62 176,100 C176,138 138,176 100,176 C62,176 24,138 24,100 C24,62 62,24 100,24",
                   "M100,20 C140,20 180,60 180,100 C180,140 140,180 100,180 C60,180 20,140 20,100 C20,60 60,20 100,20",
                 ],
               }}
               transition={{
-                duration: 6,
+                duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -69,14 +70,13 @@ const IdleBlob = () => {
         <motion.div
           className="absolute w-20 h-20 rounded-full bg-gradient-to-br from-terracotta/60 to-rust/40"
           animate={{
-            scale: [0.8, 1, 0.8],
-            opacity: [0.6, 0.8, 0.6],
+            scale: [0.85, 1, 0.85],
+            opacity: [0.5, 0.7, 0.5],
           }}
           transition={{
-            duration: 3,
+            duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 0.5,
           }}
         />
       </div>
