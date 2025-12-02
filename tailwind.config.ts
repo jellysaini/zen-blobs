@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Earth tones - reds
+        terracotta: "hsl(var(--terracotta))",
+        rust: "hsl(var(--rust))",
+        clay: "hsl(var(--clay))",
+        // Earth tones - greens
+        olive: "hsl(var(--olive))",
+        sage: "hsl(var(--sage))",
+        moss: "hsl(var(--moss))",
+        forest: "hsl(var(--forest))",
       },
       borderRadius: {
         lg: "var(--radius)",
