@@ -1,13 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import IdleBlob from "@/components/IdleBlob";
+import TalkingBlob from "@/components/TalkingBlob";
+import ListeningBlob from "@/components/ListeningBlob";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen bg-background flex flex-col items-center justify-center px-6 py-12">
+      <header className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-light text-foreground mb-3 tracking-tight">
+          Voice States
+        </h1>
+        <p className="text-muted-foreground text-lg">
+          Soothing animated blobs for each interaction state
+        </p>
+      </header>
+      
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 max-w-5xl">
+        <article className="flex items-center justify-center">
+          <IdleBlob />
+        </article>
+        <article className="flex items-center justify-center">
+          <TalkingBlob />
+        </article>
+        <article className="flex items-center justify-center">
+          <ListeningBlob />
+        </article>
+      </section>
+    </main>
   );
 };
 
