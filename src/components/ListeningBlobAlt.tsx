@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Ear } from "lucide-react";
 
 const ListeningBlobAlt = () => {
   return (
@@ -70,9 +71,10 @@ const ListeningBlobAlt = () => {
         
         {/* Ear icon */}
         <motion.div
-          className="absolute flex items-center justify-center"
+          className="absolute flex items-center justify-center text-foreground/80"
           animate={{
             scale: [1, 1.03, 1],
+            opacity: [0.7, 1, 0.7],
           }}
           transition={{
             duration: 2,
@@ -80,49 +82,7 @@ const ListeningBlobAlt = () => {
             ease: "easeInOut",
           }}
         >
-          <svg viewBox="0 0 48 48" className="w-14 h-14 text-foreground/80">
-            {/* Ear shape */}
-            <motion.path
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M28 14 C36 16, 38 26, 34 34 C32 38, 28 40, 24 40 C22 40, 20 39, 20 37 C20 35, 22 34, 24 33 C26 32, 28 30, 28 26 C28 22, 24 20, 22 22 C20 24, 20 28, 22 30"
-              animate={{
-                opacity: [0.7, 1, 0.7],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            {/* Sound waves coming in */}
-            {[0, 1, 2].map((index) => (
-              <motion.line
-                key={index}
-                x1={38 + index * 3}
-                y1={20 + index * 2}
-                x2={42 + index * 3}
-                y2={24 + index * 2}
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                animate={{
-                  opacity: [0, 0.8, 0],
-                  x1: [38 + index * 3, 36 + index * 3, 38 + index * 3],
-                  x2: [42 + index * 3, 40 + index * 3, 42 + index * 3],
-                }}
-                transition={{
-                  duration: 1.8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: index * 0.3,
-                }}
-              />
-            ))}
-          </svg>
+          <Ear size={36} strokeWidth={1.5} />
         </motion.div>
       </div>
       
