@@ -26,11 +26,11 @@ const TalkingBlob = () => {
         <motion.div
           className="absolute w-44 h-44 rounded-full bg-gradient-to-br from-sage/25 to-olive/15 blur-lg"
           animate={{
-            scale: [1, 1.1, 0.95, 1],
-            opacity: [0.5, 0.7, 0.5, 0.5],
+            scale: [1, 1.08, 0.97, 1],
+            opacity: [0.5, 0.65, 0.5, 0.5],
           }}
           transition={{
-            duration: 0.8,
+            duration: 1.8,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -40,10 +40,10 @@ const TalkingBlob = () => {
         <motion.div
           className="relative w-40 h-40"
           animate={{
-            scale: [1, 1.08, 0.95, 1.05, 1],
+            scale: [1, 1.05, 0.98, 1.03, 1],
           }}
           transition={{
-            duration: 0.6,
+            duration: 1.5,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -76,7 +76,7 @@ const TalkingBlob = () => {
                 ],
               }}
               transition={{
-                duration: 0.8,
+                duration: 1.8,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -84,23 +84,25 @@ const TalkingBlob = () => {
           </svg>
         </motion.div>
         
-        {/* Voice indicator bars */}
-        <div className="absolute bottom-12 flex gap-1">
-          {[0, 1, 2, 3, 4].map((index) => (
-            <motion.div
-              key={index}
-              className="w-1.5 rounded-full bg-gradient-to-t from-sage to-olive"
-              animate={{
-                height: [8, 24, 12, 28, 8],
-              }}
-              transition={{
-                duration: 0.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: index * 0.1,
-              }}
-            />
-          ))}
+        {/* Voice indicator bars - centered */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="flex gap-1.5 items-center">
+            {[0, 1, 2, 3, 4].map((index) => (
+              <motion.div
+                key={index}
+                className="w-1.5 rounded-full bg-gradient-to-t from-sage to-olive"
+                animate={{
+                  height: [8, 20, 12, 24, 8],
+                }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 0.15,
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
       
