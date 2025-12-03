@@ -58,9 +58,9 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         // Earth tones - reds
-        terracotta: "hsl(var(--terracotta))",
-        rust: "hsl(var(--rust))",
-        clay: "hsl(var(--clay))",
+        rose: "hsl(var(--rose))",
+        mauve: "hsl(var(--mauve))",
+        blush: "hsl(var(--blush))",
         // Earth tones - greens
         olive: "hsl(var(--olive))",
         sage: "hsl(var(--sage))",

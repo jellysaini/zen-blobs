@@ -18,10 +18,10 @@ const CombinedBlob = () => {
   // Color configs per state
   const stateColors = {
     idle: {
-      glow: "bg-gradient-to-br from-terracotta/20 to-moss/15",
-      layer3: "bg-gradient-to-br from-terracotta to-moss/80",
-      layer2: "bg-gradient-to-br from-rust/85 to-olive/70",
-      layer1: "bg-gradient-to-br from-clay/70 to-sage/55",
+      glow: "bg-gradient-to-br from-rose/20 to-moss/15",
+      layer3: "bg-gradient-to-br from-rose to-moss/80",
+      layer2: "bg-gradient-to-br from-mauve/85 to-olive/70",
+      layer1: "bg-gradient-to-br from-blush/70 to-sage/55",
     },
     talking: {
       glow: "bg-forest/20",
@@ -30,10 +30,10 @@ const CombinedBlob = () => {
       layer1: "bg-gradient-to-b from-sage/70 to-moss/60",
     },
     listening: {
-      glow: "bg-terracotta/20",
-      layer3: "bg-gradient-to-b from-terracotta to-rust/90",
-      layer2: "bg-gradient-to-b from-rust/85 to-clay/75",
-      layer1: "bg-gradient-to-b from-clay/70 to-rust/50",
+      glow: "bg-rose/20",
+      layer3: "bg-gradient-to-b from-rose to-mauve/90",
+      layer2: "bg-gradient-to-b from-mauve/85 to-blush/75",
+      layer1: "bg-gradient-to-b from-blush/70 to-mauve/50",
     },
   };
 
@@ -136,7 +136,7 @@ const CombinedBlob = () => {
             [0, 1].map((index) => (
               <motion.div
                 key={`ripple-${index}`}
-                className="absolute w-48 h-48 rounded-full border border-terracotta/25"
+                className="absolute w-48 h-48 rounded-full border border-rose/25"
                 initial={{ scale: 1, opacity: 0 }}
                 animate={{
                   scale: [1, 1.15, 1.25],

@@ -7,7 +7,7 @@ const ListeningBlobAlt = () => {
       <div className="relative w-64 h-64 flex items-center justify-center">
         {/* Outer shadow/glow */}
         <motion.div
-          className="absolute w-52 h-52 rounded-full bg-terracotta/20 blur-lg"
+          className="absolute w-52 h-52 rounded-full bg-rose/20 blur-lg"
           animate={{
             scale: [1, 1.05, 1],
             opacity: [0.3, 0.45, 0.3],
@@ -23,7 +23,7 @@ const ListeningBlobAlt = () => {
         {[0, 1].map((index) => (
           <motion.div
             key={index}
-            className="absolute w-48 h-48 rounded-full border border-terracotta/25"
+            className="absolute w-48 h-48 rounded-full border border-rose/25"
             animate={{
               scale: [1, 1.15, 1.25],
               opacity: [0.4, 0.2, 0],
@@ -39,7 +39,7 @@ const ListeningBlobAlt = () => {
         
         {/* Layer 3 - Outer ring */}
         <motion.div
-          className="absolute w-48 h-48 rounded-full bg-gradient-to-b from-terracotta to-rust/90"
+          className="absolute w-48 h-48 rounded-full bg-gradient-to-b from-rose to-mauve/90"
           style={{
             boxShadow: "inset 0 -4px 20px rgba(0,0,0,0.15), inset 0 4px 10px rgba(255,255,255,0.08)",
           }}
@@ -55,7 +55,7 @@ const ListeningBlobAlt = () => {
         
         {/* Layer 2 - Middle ring */}
         <motion.div
-          className="absolute w-40 h-40 rounded-full bg-gradient-to-b from-rust/85 to-clay/75"
+          className="absolute w-40 h-40 rounded-full bg-gradient-to-b from-mauve/85 to-blush/75"
           style={{
             boxShadow: "inset 0 2px 15px rgba(255,255,255,0.08)",
           }}
@@ -72,7 +72,7 @@ const ListeningBlobAlt = () => {
         
         {/* Layer 1 - Inner circle */}
         <motion.div
-          className="absolute w-32 h-32 rounded-full bg-gradient-to-b from-clay/70 to-rust/50"
+          className="absolute w-32 h-32 rounded-full bg-gradient-to-b from-blush/70 to-mauve/50"
           style={{
             boxShadow: "inset 0 2px 10px rgba(255,255,255,0.1)",
           }}
