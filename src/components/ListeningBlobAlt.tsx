@@ -1,15 +1,30 @@
 import { motion } from "framer-motion";
 import { Ear } from "lucide-react";
 
-const ListeningBlobAlt = () => {
+interface ListeningBlobAltProps {
+  size?: number;
+}
+
+const ListeningBlobAlt = ({ size = 256 }: ListeningBlobAltProps) => {
+  const glowSize = size * 0.8125;
+  const layer3Size = size * 0.75;
+  const layer2Size = size * 0.625;
+  const layer1Size = size * 0.5;
+  const iconSize = size * 0.14;
+
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="relative w-64 h-64 flex items-center justify-center">
+      <div
+        className="relative flex items-center justify-center"
+        style={{ width: size, height: size }}
+      >
         {/* Outer shadow/glow */}
         <motion.div
-          className="absolute w-52 h-52 rounded-full blur-lg"
+          className="absolute rounded-full blur-lg"
           style={{
-            background: "hsl(0 68% 46% / 0.2)",
+            width: glowSize,
+            height: glowSize,
+            background: "hsl(0 50% 55% / 0.18)",
           }}
           animate={{
             scale: [1, 1.05, 1],
@@ -26,9 +41,11 @@ const ListeningBlobAlt = () => {
         {[0, 1].map((index) => (
           <motion.div
             key={index}
-            className="absolute w-48 h-48 rounded-full"
+            className="absolute rounded-full"
             style={{
-              border: "1px solid hsl(0 68% 46% / 0.25)",
+              width: layer3Size,
+              height: layer3Size,
+              border: "1px solid hsl(0 45% 58% / 0.2)",
             }}
             animate={{
               scale: [1, 1.15, 1.25],
@@ -43,12 +60,14 @@ const ListeningBlobAlt = () => {
           />
         ))}
         
-        {/* Layer 3 - Outer ring (red gradient) */}
+        {/* Layer 3 - Outer ring (softer red gradient, dark top-left to light bottom-right) */}
         <motion.div
-          className="absolute w-48 h-48 rounded-full"
+          className="absolute rounded-full"
           style={{
-            background: "linear-gradient(180deg, hsl(0 68% 46%), hsl(0 68% 38%))",
-            boxShadow: "inset 0 -4px 20px rgba(0,0,0,0.15), inset 0 4px 10px rgba(255,255,255,0.08)",
+            width: layer3Size,
+            height: layer3Size,
+            background: "linear-gradient(135deg, hsl(0 50% 48%), hsl(10 40% 62%))",
+            boxShadow: "inset 0 -4px 20px rgba(0,0,0,0.12), inset 0 4px 10px rgba(255,255,255,0.08)",
           }}
           animate={{
             scale: [1, 1.02, 0.99, 1],
@@ -62,8 +81,10 @@ const ListeningBlobAlt = () => {
         
         {/* Layer 2 - Middle ring (subtle white gradient) */}
         <motion.div
-          className="absolute w-40 h-40 rounded-full"
+          className="absolute rounded-full"
           style={{
+            width: layer2Size,
+            height: layer2Size,
             background: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))",
             boxShadow: "inset 0 1px 8px rgba(255,255,255,0.06)",
           }}
@@ -80,8 +101,10 @@ const ListeningBlobAlt = () => {
         
         {/* Layer 1 - Inner circle (subtle white gradient) */}
         <motion.div
-          className="absolute w-32 h-32 rounded-full"
+          className="absolute rounded-full"
           style={{
+            width: layer1Size,
+            height: layer1Size,
             background: "linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))",
             boxShadow: "inset 0 1px 6px rgba(255,255,255,0.04)",
           }}
@@ -109,7 +132,7 @@ const ListeningBlobAlt = () => {
             ease: "easeInOut",
           }}
         >
-          <Ear size={36} strokeWidth={1.5} />
+          <Ear size={iconSize} strokeWidth={1.5} />
         </motion.div>
       </div>
       
