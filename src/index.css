@@ -44,15 +44,15 @@
     --sidebar-ring: 15 55% 50%;
 
     /* Earth tone palette - reds */
-    --terracotta: 15 55% 50%;
-    --rust: 20 65% 42%;
-    --clay: 12 45% 38%;
+    --rose: 355 42% 52%;
+    --mauve: 5 38% 48%;
+    --blush: 20 30% 52%;
     
     /* Earth tone palette - greens */
-    --olive: 80 35% 40%;
-    --sage: 130 25% 50%;
-    --moss: 95 30% 35%;
-    --forest: 140 35% 30%;
+    --olive: 50 25% 45%;
+    --sage: 120 28% 48%;
+    --moss: 100 32% 38%;
+    --forest: 150 38% 32%;
   }
 
   .dark {
